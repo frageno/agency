@@ -21,7 +21,7 @@ const marqueeVariants = {
 
 const HomepageHero = () => {
   return (
-    <section className="w-full min-h-[80vh] relative flex flex-col lg:flex-row md:gap-y-12 mb-32 isolate">
+    <section className="w-full min-h-screen relative flex flex-col lg:flex-row md:gap-y-12 md:mb-32 isolate">
       {/* Left Section: Content*/}
       <div className="flex flex-1 flex-col justify-center items-center lg:max-w-[50%] z-10 space-y-12 md:space-y-20 bg-white">
         <div className="w-screen relative z-10 mix-blend-difference overflow-hidden text-white pointer-events-none -left-1/2 translate-x-1/2">
@@ -38,7 +38,7 @@ const HomepageHero = () => {
 
         <div className="px-16 md:px-32 space-y-24">
           {/* Description */}
-          <p className="mt-8 mb-10 text-lg md:text-2xl text-gray-700 max-w-3xl">
+          <p className="mt-8 mb-12 text-lg md:text-4xl max-w-3xl">
             We craft innovative digital experiences that resonate with audiences and elevate brands globally. Partner with us to create something exceptional.
           </p>
 

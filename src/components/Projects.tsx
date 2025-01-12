@@ -6,33 +6,28 @@ import { Button } from "./ui/button";
 
 interface Project {
   title: string;
-  description: string;
   image: string;
   link: string; // Added link property
 }
 
 const projects: Project[] = [
   {
-    title: "Project 1",
-    description: "Description for project 1",
+    title: "Embracing the Digital Age: Optinet's Quest for brand & digital Transformation",
     image: "/project-3.png",
     link: "/projects/project-1"
   },
   {
-    title: "Project 2",
-    description: "Description for project 2",
+    title: "Embracing the Digital Age: Optinet's Quest for brand & digital Transformation",
     image: "/project-3.png",
     link: "/projects/project-2"
   },
   {
-    title: "Project 3",
-    description: "Description for project 3",
+    title: "Embracing the Digital Age: Optinet's Quest for brand & digital Transformation",
     image: "/project-3.png",
     link: "/projects/project-3"
   },
   {
-    title: "Project 4",
-    description: "Description for project 4",
+    title: "Embracing the Digital Age: Optinet's Quest for brand & digital Transformation",
     image: "/project-3.png",
     link: "/projects/project-4"
   },
@@ -45,17 +40,27 @@ const Projects = () => {
     offset: ["start start", "end end"]
   });
 
+  const { scrollYProgress: headlineProgress } = useScroll({
+    offset: ["0.1 end", "0.4 end"]
+  });
+
   const x = useTransform(scrollYProgress, [0, 1], ["0%", "-75%"]);
+  const headlineX = useTransform(scrollYProgress, [0, 0.2], ["-100%", "0%"]);
 
   return (
     <section 
       ref={containerRef} 
-      className="relative h-[300vh] bg-background"
+      className="relative h-[300vh] bg-background py-16 md:py-32"
     >
+      <motion.h2 
+        className="text-6xl md:text-[320px] font-bold italic px-16 whitespace-nowrap"
+      >
+        Work
+      </motion.h2>
       <div className="sticky top-0 h-screen flex items-center overflow-hidden">
         <motion.div 
           style={{ x }} 
-          className="flex gap-8 px-16"
+          className="flex gap-8 md:gap-16 px-16"
         >
           {projects.map((project, index) => (
             <div
@@ -72,13 +77,10 @@ const Projects = () => {
                   className="object-cover w-full h-full"
                 />
               </div>
-              <div className="mb-6">
-                <h3 className="text-4xl font-bold mb-2">
+              <div className="my-10">
+                <h3 className="text-4xl mb-8">
                   {project.title}
                 </h3>
-                <p className="text-lg opacity-80 mb-4">
-                  {project.description}
-                </p>
                 <Button 
                   text="View Project" 
                   className="inline-block"

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Merriweather } from "next/font/google";
 import SmoothScroll from "@/components/ui/SmoothScroll";
 import "./globals.css";
+import Navbar from "@/components/Navbar";
 
 const merriweather = Merriweather({
   subsets: ['latin'],
@@ -22,7 +23,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={merriweather.variable}>
-      <body className="antialiased font-serif">
+      <body className="antialiased font-serif overflow-x-hidden">
+        <Navbar />
         <SmoothScroll>{children}</SmoothScroll>
       </body>
     </html>
