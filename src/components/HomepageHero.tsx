@@ -21,9 +21,9 @@ const marqueeVariants = {
 
 const HomepageHero = () => {
   return (
-    <section className="w-full min-h-screen relative flex flex-col lg:flex-row md:gap-y-12 md:mb-32 isolate">
+    <section className="w-full md:min-h-screen relative flex flex-col lg:flex-row gap-y-24 md:mb-32 isolate mt-[152px]">
       {/* Left Section: Content*/}
-      <div className="flex flex-1 flex-col justify-center items-center lg:max-w-[50%] z-10 space-y-12 md:space-y-20 bg-white">
+      <div className="flex flex-1 flex-col justify-center items-center lg:max-w-[50%] z-10 space-y-8 md:space-y-20 bg-white">
         <div className="w-screen relative z-10 mix-blend-difference overflow-hidden text-white pointer-events-none -left-1/2 translate-x-1/2">
           <motion.h1
             variants={marqueeVariants}
