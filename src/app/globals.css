@@ -14,15 +14,15 @@
   }
 }
 
-*, *::before, *::after {
+/* *, *::before, *::after {
   cursor: none !important;
 }
 
 @media (pointer: coarse) {
   *, *::before, *::after {
     cursor: auto !important;
-  }
-}
+  } */
+/* } */
 
 body {
   color: var(--foreground);

@@ -13,18 +13,6 @@ export default function Home() {
         Let's collaborate to turn your vision into digital success.
       </Text>
       <Projects />
-      <Text highlighted={["innovative", "outstanding"]}>
-        We create innovative digital experiences that transform businesses and delight users.
-        Our approach combines creativity and strategy to deliver impactful digital solutions.
-        With years of expertise, we consistently deliver outstanding results for our clients.
-        Let's collaborate to turn your vision into digital success.
-      </Text>
-      <Text highlighted={["innovative", "outstanding"]}>
-        We create innovative digital experiences that transform businesses and delight users.
-        Our approach combines creativity and strategy to deliver impactful digital solutions.
-        With years of expertise, we consistently deliver outstanding results for our clients.
-        Let's collaborate to turn your vision into digital success.
-      </Text>
     </div>
   );
 }

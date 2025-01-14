@@ -8,12 +8,10 @@ const Cursor = () => {
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
-      // Immediately update mouse position for smooth following
-      requestAnimationFrame(() => {
-        setMousePosition({ x: e.clientX, y: e.clientY });
-      });
+      setMousePosition({ x: e.clientX, y: e.clientY });
     };
 
+    // Add hover detection
     const handleMouseEnter = () => setIsHovered(true);
     const handleMouseLeave = () => setIsHovered(false);
 
@@ -37,33 +35,35 @@ const Cursor = () => {
 
   return (
     <>
+      {/* Outer circle */}
       <motion.div
-        className="fixed top-0 left-0 w-[50px] h-[50px] border border-black rounded-full pointer-events-none z-50"
-        animate={{ 
+        className="fixed top-0 left-0 w-[100px] h-[100px] border border-black rounded-full pointer-events-none z-50"
+        animate={{
           x: mousePosition.x - 25,
           y: mousePosition.y - 25,
-          scale: isHovered ? 1.5 : 1 
+          scale: isHovered ? 1.5 : 1,
         }}
         transition={{
           type: "spring",
-          damping: 30,
-          stiffness: 400,
-          restDelta: 0.001
+          stiffness: 150,
+          damping: 15,
+          mass: 0.5
         }}
       />
       
+      {/* Inner dot */}
       <motion.div
         className="fixed top-0 left-0 w-2 h-2 bg-black rounded-full pointer-events-none z-50"
-        animate={{ 
+        animate={{
           x: mousePosition.x - 4,
           y: mousePosition.y - 4,
-          scale: isHovered ? 2 : 1 
+          scale: isHovered ? 2 : 1,
         }}
         transition={{
           type: "spring",
-          damping: 25,
-          stiffness: 500,
-          restDelta: 0.001
+          stiffness: 250,
+          damping: 15,
+          mass: 0.2
         }}
       />
     </>
