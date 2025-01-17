@@ -1,6 +1,7 @@
 import HomepageHero from "@/components/HomepageHero";
 import Text from "@/components/Text";
 import Projects from "@/components/Projects";
+import CardsTeasers from "@/components/Cards";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
         Let's collaborate to turn your vision into digital success.
       </Text>
       <Projects />
+      <CardsTeasers />
     </div>
   );
 }
