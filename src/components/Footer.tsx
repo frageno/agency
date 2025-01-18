@@ -47,14 +47,14 @@ const Footer = () => {
       variants={containerVariants}
     >
       {/* Footer Hero */}
-      <div className="max-w-3xl mx-auto pt-64 pb-32">
+      <div className="max-w-3xl mx-auto px-5 pt-32 xl:pt-64 pb-32">
         <motion.div 
           className="flex flex-col md:flex-row justify-between items-center gap-8"
           variants={itemVariants}
         >
           <motion.h2 
             variants={itemVariants}
-            className="text-4xl md:text-[250px] font-bold"
+            className="text-4xl md:text-6xl xl:text-[250px] font-bold"
           >
             Let's talk
           </motion.h2>
@@ -70,8 +70,8 @@ const Footer = () => {
       </div>
 
       {/* Main Footer Content */}
-      <div className="max-w-3xl mx-auto py-24">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
+      <div className="max-w-3xl mx-auto px-5 py-24">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-16">
           {/* Navigation Links */}
           <div>
             <h3 className="text-3xl font-bold mb-8">Navigation</h3>
@@ -110,7 +110,7 @@ const Footer = () => {
               <p>+1 (555) 123-4567</p>
             </div>
             
-            <div className="flex gap-6">
+            <div className="flex flex-col xl:flex-row gap-6">
               {socialLinks.map((link, index) => (
                 <Link 
                   key={index}
@@ -127,7 +127,7 @@ const Footer = () => {
 
       {/* Bottom Bar */}
       <div className="max-w-3xl mx-auto">
-        <div className="border-t border-white/10 py-8">
+        <div className="border-t border-white/10 px-5 py-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm text-gray-400">
               © 2024 Agency. All rights reserved.

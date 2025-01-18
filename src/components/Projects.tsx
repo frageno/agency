@@ -44,29 +44,29 @@ const Projects = () => {
     offset: ["0.1 end", "0.4 end"]
   });
 
-  const x = useTransform(scrollYProgress, [0, 1], ["0%", "-50%"]);
+  const x = useTransform(scrollYProgress, [0, 1], ["0%", "-75%"]);
   const headlineX = useTransform(scrollYProgress, [0, 0.2], ["-100%", "0%"]);
 
   return (
     <section 
       ref={containerRef} 
-      className="relative h-[200vh] bg-background py-16 md:py-32"
+      className="relative h-[300vh] bg-background py-16 md:py-32"
     >
       <motion.h2 
-        className="text-6xl md:text-[320px] font-bold italic px-16 whitespace-nowrap"
+        className="text-6xl md:text-[100px] xl:text-[320px] font-bold px-5 md:px-16 whitespace-nowrap"
       >
         Work
       </motion.h2>
       <div className="sticky top-0 h-screen flex items-center overflow-hidden">
         <motion.div 
           style={{ x }} 
-          className="flex gap-8 md:gap-16 px-16"
+          className="flex gap-8 md:gap-16 px-5 md:px-16"
         >
           {projects.map((project, index) => (
             <div
               key={index}
               className={cn(
-                "relative flex-shrink-0 w-[650px] flex flex-col",
+                "relative flex-shrink-0 w-[300px] md:w-[650px] flex flex-col",
                 "group"
               )}
             >
@@ -78,7 +78,7 @@ const Projects = () => {
                 />
               </div>
               <div className="my-10">
-                <h3 className="text-4xl mb-8">
+                <h3 className="text-xl md:text-4xl mb-8">
                   {project.title}
                 </h3>
                 <Button 
