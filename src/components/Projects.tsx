@@ -74,11 +74,11 @@ const Projects = () => {
                 <img 
                   src={project.image} 
                   alt={project.title} 
-                  className="object-cover w-full h-full"
+                  className="object-cover w-full h-full md:h-[640px]"
                 />
               </div>
               <div className="my-10">
-                <h3 className="text-xl md:text-4xl mb-8">
+                <h3 className="text-xl md:text-4xl md:leading-[1.4] mb-8">
                   {project.title}
                 </h3>
                 <Button 

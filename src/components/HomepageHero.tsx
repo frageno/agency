@@ -6,7 +6,7 @@ import { Button } from './ui/button';
 
 const marqueeVariants = {
   animate: {
-    x: [0, -8000], // Dostosuj wartość przesuwu w zależności od długości tekstu
+    x: [0, -8000], 
     transition: {
       x: {
         repeat: Infinity,
@@ -38,7 +38,7 @@ const HomepageHero = () => {
 
         <div className="px-16 md:px-32 space-y-24">
           {/* Description */}
-          <p className="mt-8 mb-12 text-lg md:text-4xl max-w-3xl">
+          <p className="mt-8 mb-12 text-lg md:text-4xl md:leading-[1.6] max-w-3xl">
             We craft innovative digital experiences that resonate with audiences and elevate brands globally. Partner with us to create something exceptional.
           </p>
 

@@ -1,0 +1,44 @@
+'use client';
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
+import Image from "next/image";
+
+interface ParallaxImageProps {
+  src: string;
+  alt: string;
+}
+
+const ParallaxImage = ({ src, alt }: ParallaxImageProps) => {
+  const containerRef = useRef<HTMLDivElement>(null);
+  
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start end", "end start"]
+  });
+
+  const y = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
+
+  return (
+    <div className="px-16 md:px-64 py-32">
+      <div 
+        ref={containerRef}
+        className="relative h-[60vh] md:h-[80vh] overflow-hidden"
+      >
+        <motion.div 
+          style={{ y }}
+          className="absolute inset-0 w-full h-full -top-[10%]"
+        >
+          <Image
+            src={src}
+            alt={alt}
+            fill
+            priority
+            className="aspect-square object-cover"
+          />
+        </motion.div>
+      </div>
+    </div>
+  );
+};
+
+export default ParallaxImage;

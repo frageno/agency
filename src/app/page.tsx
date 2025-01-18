@@ -2,6 +2,7 @@ import HomepageHero from "@/components/HomepageHero";
 import Text from "@/components/Text";
 import Projects from "@/components/Projects";
 import CardsTeasers from "@/components/Cards";
+import ParallaxImage from "@/components/ParallaxImage";
 
 export default function Home() {
   return (
@@ -9,12 +10,16 @@ export default function Home() {
       <HomepageHero />
       <Text highlighted={["innovative", "outstanding"]}>
         We create innovative digital experiences that transform businesses and delight users.
-        Our approach combines creativity and strategy to deliver impactful digital solutions.
+        Our approach combines creativity to deliver impactful digital solutions.
         With years of expertise, we consistently deliver outstanding results for our clients.
         Let's collaborate to turn your vision into digital success.
       </Text>
       <Projects />
       <CardsTeasers />
+      <ParallaxImage 
+        src="/image.jpg" 
+        alt="Agency hero image" 
+      />
     </div>
   );
 }

@@ -31,7 +31,7 @@ const Text = ({ children, highlighted = [] }: TextProps) => {
       transition={{ duration: 0.8, ease: "easeOut" }}
       className="w-full md:max-w-[80vw] text-center mx-auto py-16 md:py-32 px-5 md:px-8"
     >
-      <p className="text-2xl lg:text-4xl 2xl:text-7xl !leading-[2.8rem] lg:!leading-[4rem] 2xl:!leading-[7rem]">
+      <p className="text-2xl lg:text-4xl 2xl:text-7xl !leading-[2.8rem] lg:!leading-[4rem] 2xl:!leading-[1.6]">
         {typeof children === 'string' ? highlightText(children) : children}
       </p>
     </motion.div>
