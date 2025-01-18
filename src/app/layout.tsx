@@ -25,7 +25,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={merriweather.variable}>
-      <body className="antialiased font-serif overflow-x-hidden">
+      <body className="antialiased font-sans overflow-x-hidden">
         {/* <Cursor /> */}
         <Navbar />
         <SmoothScroll>

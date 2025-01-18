@@ -12,6 +12,9 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        sans: ['var(--font-merriweather)'], 
+      },
       screens: {
         'fhd': '1920px',
         '2k': '2560px',
