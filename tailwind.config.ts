@@ -12,6 +12,11 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      screens: {
+        'fhd': '1920px',
+        '2k': '2560px',
+        '4k': '3840px',
+      },
       maxWidth: {
         'xs': '320px',
         'sm': '640px',
