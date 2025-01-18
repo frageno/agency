@@ -74,7 +74,7 @@ const Projects = () => {
                 <img 
                   src={project.image} 
                   alt={project.title} 
-                  className="object-cover w-full h-full md:h-[640px]"
+                  className="object-cover w-full h-full 2xl:h-[640px]"
                 />
               </div>
               <div className="my-10">

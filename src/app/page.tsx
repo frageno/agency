@@ -3,6 +3,8 @@ import Text from "@/components/Text";
 import Projects from "@/components/Projects";
 import CardsTeasers from "@/components/Cards";
 import ParallaxImage from "@/components/ParallaxImage";
+import About from "@/components/About";
+import MasonryImages from "@/components/MasonaryImages";
 
 export default function Home() {
   return (
@@ -19,6 +21,13 @@ export default function Home() {
       <ParallaxImage 
         src="/image.jpg" 
         alt="Agency hero image" 
+      />
+      <About />
+      <MasonryImages 
+        images={[
+          { src: "/image.jpg", alt: "About image 1" },
+          { src: "/image.jpg", alt: "About image 2" },
+        ]} 
       />
     </div>
   );

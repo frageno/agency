@@ -54,7 +54,7 @@ const CardTeaser = ({ title, description, image, link }: Card) => {
             <div className="transform transition-all duration-700 translate-y-[20%] group-hover:translate-y-[10%] lg:group-hover:translate-y-[3%] xl:group-hover:-translate-y-[30%] 2xl:group-hover:-translate-y-[20%] 2k:group-hover:-translate-y-1/2">
               <h3 className="text-4xl font-bold text-white mb-4 group-hover:text-black">{title}</h3>
               <motion.p 
-                className="text-base 2xl:text-xl max-h-0 opacity-0 overflow-hidden transition-all duration-500 group-hover:opacity-100 group-hover:text-black group-hover:max-h-[500px]"
+                className="text-base 2xl:text-xl max-h-0 !leading-8 opacity-0 overflow-hidden transition-all duration-500 group-hover:opacity-100 group-hover:text-black group-hover:max-h-[500px]"
               >
                 {description}
               </motion.p>

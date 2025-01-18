@@ -3,38 +3,18 @@ import React from 'react'
 import { motion } from "framer-motion";
 import { HiArrowRight } from 'react-icons/hi';
 import { Button } from './ui/button';
+import MarqueeText from './ui/MarqueeText';
 
-const marqueeVariants = {
-  animate: {
-    x: [0, -8000], 
-    transition: {
-      x: {
-        repeat: Infinity,
-        repeatType: "loop",
-        duration: 80,
-        ease: "linear",
-        repeatDelay: 0 
-      },
-    },
-  },
-};
 
 const HomepageHero = () => {
   return (
     <section className="w-full md:min-h-screen relative flex flex-col lg:flex-row gap-y-24 md:mb-32 isolate mt-[152px]">
       {/* Left Section: Content*/}
       <div className="flex flex-1 flex-col justify-center items-center lg:max-w-[50%] z-10 space-y-8 md:space-y-20 bg-white">
-        <div className="w-screen relative z-10 mix-blend-difference overflow-hidden text-white pointer-events-none -left-1/2 translate-x-1/2">
-          <motion.h1
-            variants={marqueeVariants}
-            animate="animate"
-            className="inline-block will-change-transform text-6xl md:text-[240px] font-bold leading-tight whitespace-nowrap"
-          >
-            We Create Digital Products That People Love &nbsp;
-            We Create Digital Products That People Love &nbsp;
-            We Create Digital Products That People Love &nbsp;
-          </motion.h1>
-        </div>
+        <MarqueeText 
+          text="We Create Digital Products That People Love"
+          className="text-6xl md:text-[240px] font-bold leading-tight"
+        />
 
         <div className="px-16 md:px-32 space-y-24">
           {/* Description */}

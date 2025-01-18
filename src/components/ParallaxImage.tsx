@@ -19,10 +19,10 @@ const ParallaxImage = ({ src, alt }: ParallaxImageProps) => {
   const y = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
 
   return (
-    <div className="px-16 md:px-64 py-32">
+    <div className="px-5 lg:px-16 xl:px-32 2xl:px-64 py-16 2xl:py-32">
       <div 
         ref={containerRef}
-        className="relative h-[60vh] md:h-[80vh] overflow-hidden"
+        className="relative h-[40vh] md:h-[60vh] xl:h-[80vh] overflow-hidden"
       >
         <motion.div 
           style={{ y }}
