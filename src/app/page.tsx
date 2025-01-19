@@ -5,6 +5,7 @@ import CardsTeasers from "@/components/Cards";
 import ParallaxImage from "@/components/ParallaxImage";
 import About from "@/components/About";
 import MasonryImages from "@/components/MasonaryImages";
+import Posts from "@/components/Posts";
 
 export default function Home() {
   return (
@@ -29,6 +30,7 @@ export default function Home() {
           { src: "/image.jpg", alt: "About image 2" },
         ]} 
       />
+      <Posts />
     </div>
   );
 }
