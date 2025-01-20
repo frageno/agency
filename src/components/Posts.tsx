@@ -3,13 +3,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { HiArrowUpRight } from "react-icons/hi2";
 import { cn } from "@/lib/utils";
-
-interface Post {
-  title: string;
-  category: string;
-  date: string;
-  link: string;
-}
+import { posts } from "@/data/posts";
 
 const containerVariants = {
     hidden: { 
@@ -18,7 +12,7 @@ const containerVariants = {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.2 // Controls delay between each item animation
+        staggerChildren: 0.2 
       }
     }
   };
@@ -38,26 +32,6 @@ const containerVariants = {
     }
   };
 
-const posts: Post[] = [
-  {
-    title: "The Future of Digital Design: Trends to Watch",
-    category: "Design",
-    date: "March 15, 2024",
-    link: "/blog/future-of-design"
-  },
-  {
-    title: "How AI is Transforming User Experience",
-    category: "Technology",
-    date: "March 10, 2024",
-    link: "/blog/ai-and-ux"
-  },
-  {
-    title: "Building Sustainable Digital Products",
-    category: "Development",
-    date: "March 5, 2024",
-    link: "/blog/sustainable-products"
-  }
-];
 
 const Posts = () => {
     return (
