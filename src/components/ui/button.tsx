@@ -6,15 +6,17 @@ export const Button = ({
   className,
   target,
   text,
+  href,
   icon
 }: {
   className?: string;
   target?: string;
   text: string;
+  href?: string;
   icon?: React.ReactNode;
 }) => {
   return (
-    <a target={target} className={cn(
+    <a href={href} target={target} className={cn(
     "px-12 py-4 border cursor-pointer border-black bg-transparent text-white dark:border-white relative group transition duration-200",
      className
     )}>

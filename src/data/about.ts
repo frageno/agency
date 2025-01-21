@@ -1,6 +1,6 @@
 import { About } from '@/types';
 
-export const aboutData: About = {
+export const aboutData: About[] = {
   title: "About Our Creative Digital Agency",
   columns: [
     {

@@ -2,36 +2,8 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { cn } from "@/lib/utils";
-import { Button } from "./ui/button";
-
-interface Project {
-  title: string;
-  image: string;
-  link: string; // Added link property
-}
-
-const projects: Project[] = [
-  {
-    title: "Embracing the Digital Age: Optinet's Quest for brand & digital Transformation",
-    image: "/projects/project-1.jpg",
-    link: "/projects/project-1"
-  },
-  {
-    title: "Embracing the Digital Age: Optinet's Quest for brand & digital Transformation",
-    image: "/projects/project-2.jpg",
-    link: "/projects/project-2"
-  },
-  {
-    title: "Embracing the Digital Age: Optinet's Quest for brand & digital Transformation",
-    image: "/projects/project-3.jpg",
-    link: "/projects/project-3"
-  },
-  {
-    title: "Embracing the Digital Age: Optinet's Quest for brand & digital Transformation",
-    image: "/projects/project-4.jpg",
-    link: "/projects/project-4"
-  },
-];
+import { Button } from "./ui/Button";
+import { projects, projectHeadline } from "@/data/projects";
 
 const Projects = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -55,7 +27,7 @@ const Projects = () => {
       <motion.h2 
         className="text-6xl md:text-[100px] xl:text-[320px] font-bold px-5 md:px-16 whitespace-nowrap"
       >
-        Work
+        {projectHeadline.headline}
       </motion.h2>
       <div className="sticky top-0 h-screen flex items-center overflow-hidden">
         <motion.div 

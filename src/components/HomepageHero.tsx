@@ -2,8 +2,9 @@
 import React from 'react'
 import { motion } from "framer-motion";
 import { HiArrowRight } from 'react-icons/hi';
-import { Button } from './ui/button';
+import { Button } from './ui/Button';
 import MarqueeText from './ui/MarqueeText';
+import { homepageHero } from '@/data/homepagehero';
 
 
 const HomepageHero = () => {
@@ -19,11 +20,11 @@ const HomepageHero = () => {
         <div className="px-16 md:px-32 space-y-24">
           {/* Description */}
           <p className="mt-8 mb-12 text-lg md:text-4xl md:leading-[1.6] max-w-3xl">
-            We craft innovative digital experiences that resonate with audiences and elevate brands globally. Partner with us to create something exceptional.
+            {homepageHero.description}
           </p>
 
           {/* Button */}
-          <Button text={'Get Started'} icon={<HiArrowRight />} target={'_blank'} />
+          <Button text={homepageHero.buttonText} href={homepageHero.buttonLink} icon={<HiArrowRight />} target={'_blank'} />
         </div>
       </div>
 
@@ -37,7 +38,7 @@ const HomepageHero = () => {
             playsInline
             className="w-full h-full object-cover"
           >
-            <source src="/movie.mp4" type="video/mp4" />
+            <source src={homepageHero.movieUrl} type="video/mp4" />
           </video>
           
         </div>

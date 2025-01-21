@@ -3,18 +3,8 @@ import Link from "next/link";
 import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { useState } from "react";
+import { navLinks, navbarContent } from "@/data/navbar"
 
-interface NavLink {
-  title: string;
-  href: string;
-}
-
-const navLinks: NavLink[] = [
-  { title: "Home", href: "/" },
-  { title: "Projects", href: "/projects" },
-  { title: "About", href: "/about" },
-  { title: "Contact", href: "/contact" },
-];
 
 const Navbar = () => {
   const [hidden, setHidden] = useState(false);
@@ -44,7 +34,7 @@ const Navbar = () => {
       <div className="flex items-center justify-between px-5 md:px-16 py-8">
         {/* Logo */}
         <Link href="/" className="text-lg lg:text-6xl font-bold">
-          Agency.
+          {navbarContent.logoText}
         </Link>
 
         {/* Hamburger Menu Button */}
@@ -83,11 +73,11 @@ const Navbar = () => {
             </Link>
           ))}
           <Link 
-            href="/contact"
+            href={navbarContent.navbarButtonLink}
             onClick={() => setIsOpen(false)}
             className="mt-8 px-8 py-4 bg-black text-white text-xl hover:bg-black/90 transition-colors"
           >
-            Let's Talk
+            {navbarContent.navbarButtonTitle}
           </Link>
         </motion.nav>
 

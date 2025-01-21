@@ -1,21 +1,17 @@
 "use client";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import { textContent } from "@/data/text"
 
-interface TextProps {
-  children: React.ReactNode;
-  highlighted?: string[];
-}
-
-const Text = ({ children, highlighted = [] }: TextProps) => {
+const Text = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.5 });
 
   const highlightText = (text: string) => {
-    if (!highlighted.length) return text;
+    if (!textContent.highlighted.length) return text;
 
     return text.split(' ').map((word, i) => (
-      highlighted.includes(word) ? (
+      textContent.highlighted.includes(word) ? (
         <span key={i} className="p-2 bg-black uppercase text-white">
           {word}
         </span>
@@ -32,7 +28,7 @@ const Text = ({ children, highlighted = [] }: TextProps) => {
       className="w-full md:max-w-[80vw] text-center mx-auto py-16 md:py-32 px-5 md:px-8"
     >
       <p className="text-2xl lg:text-4xl 2xl:text-7xl !leading-[2.8rem] lg:!leading-[4rem] 2xl:!leading-[1.6]">
-        {typeof children === 'string' ? highlightText(children) : children}
+        {typeof textContent.content === 'string' ? highlightText(textContent.content) : textContent.content}
       </p>
     </motion.div>
   );

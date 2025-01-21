@@ -2,13 +2,9 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import Image from "next/image";
+import { parallaxImage } from '@/data/parallaxImage';
 
-interface ParallaxImageProps {
-  src: string;
-  alt: string;
-}
-
-const ParallaxImage = ({ src, alt }: ParallaxImageProps) => {
+const ParallaxImage = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   
   const { scrollYProgress } = useScroll({
@@ -29,8 +25,8 @@ const ParallaxImage = ({ src, alt }: ParallaxImageProps) => {
           className="absolute inset-0 w-full h-full -top-[10%]"
         >
           <Image
-            src={src}
-            alt={alt}
+            src={parallaxImage.src}
+            alt={parallaxImage.alt}
             fill
             priority
             className="aspect-square object-cover"

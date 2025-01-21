@@ -1,20 +1,14 @@
 'use client';
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
-
-interface MasonryImagesProps {
-    images: {
-      src: string;
-      alt: string;
-    }[];
-  }
+import { masonryImage } from "@/data/masonaryImages";
   
-  const MasonryImages = ({ images }: MasonryImagesProps) => {
+  const MasonryImages = () => {
   
     return (
       <div className="relative px-5 xl:px-16 2xl:px-48 py-16 2xl:py-32">
         <div className="flex flex-wrap justify-between gap-6 md:gap-12">
-          {images.map((image, index) => (
+          {masonryImage.images.map((image, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 100 }}
