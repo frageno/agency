@@ -20,12 +20,32 @@ export interface Card {
 }
 
 export interface Footer {
-  title: string;
-  href: string;
-  address: string[];
-  email: string;
-  phone: string;
+  hero: {
+    title: string;
+    buttonText: string;
+    buttonLink: string;
+  };
+  navigation: {
+    title: string;
+    links: { title: string; href: string }[];
+  };
+  contact: {
+    title: string;
+    info: {
+      address: string[];
+      email: string;
+      phone: string;
+    };
+  };
+  social: {
+    links: { title: string; href: string }[];
+  };
+  bottom: {
+    copyright: string;
+    links: { title: string; href: string }[];
+  };
 }
+
 
 export interface HomepageHero {
   title: string;

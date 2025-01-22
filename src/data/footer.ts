@@ -1,6 +1,6 @@
 import { Footer } from '@/types';
 
-export const footerData: Footer[] = {
+export const footerData: Footer = {
     hero: {
         title: "Let's talk",
         buttonText: "Contact Us",

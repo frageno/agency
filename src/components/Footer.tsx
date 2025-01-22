@@ -1,28 +1,50 @@
 'use client';
+import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { footerData } from "@/data/footer";
 
 const Footer = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
   const containerVariants = {
-    hidden: { opacity: 0, y: 100 },
+    hidden: { 
+      opacity: isMobile ? 1 : 0, 
+      y: isMobile ? 0 : 100 
+    },
     visible: {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.8,
-        staggerChildren: 0.2
+        duration: isMobile ? 0 : 0.8,
+        staggerChildren: isMobile ? 0 : 0.2
       }
     }
   };
-
+  
   const itemVariants = {
-    hidden: { opacity: 0, y: 50 },
+    hidden: { 
+      opacity: isMobile ? 1 : 0, 
+      y: isMobile ? 0 : 50 
+    },
     visible: { 
       opacity: 1, 
       y: 0,
-      transition: { duration: 0.5 }
+      transition: { 
+        duration: isMobile ? 0 : 0.5 
+      }
     }
   };
 

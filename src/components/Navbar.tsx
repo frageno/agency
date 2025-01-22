@@ -29,7 +29,7 @@ const Navbar = () => {
       }}
       animate={hidden ? "hidden" : "visible"}
       transition={{ duration: 0.35, ease: "easeInOut" }}
-      className="fixed top-0 left-0 right-0 z-50 bg-background"
+      className="fixed top-0 left-0 right-0 z-50 w-screen bg-background"
     >
       <div className="flex items-center justify-between px-5 md:px-16 py-8">
         {/* Logo */}
@@ -60,7 +60,7 @@ const Navbar = () => {
         <motion.nav
           initial={false}
           animate={isOpen ? { x: "0%" } : { x: "100%" }}
-          className="fixed top-0 right-0 bottom-0 w-full bg-background xl:hidden flex flex-col items-center justify-center"
+          className="fixed top-0 right-0 bottom-0 left-0 w-screen bg-background xl:hidden flex flex-col items-center justify-center"
         >
           {navLinks.map((link, index) => (
             <Link

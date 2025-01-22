@@ -7,7 +7,7 @@ export const navLinks: NavLink[] = [
   { title: "Contact", href: "/contact" },
 ]
 
-export const navbarContent: NavbarProps[] = {
+export const navbarContent: NavbarProps = {
     logoText: "Agency",
     navbarButtonLink: "/contact",
     navbarButtonTitle: "Let's Talk"
