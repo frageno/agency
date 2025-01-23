@@ -22,7 +22,7 @@ const Projects = () => {
   return (
     <section 
       ref={containerRef} 
-      className="relative h-[300vh] bg-background py-16 md:py-32"
+      className="relative h-[300vh] bg-background py-12 md:py-32"
     >
       <motion.h2 
         className="text-6xl md:text-[100px] xl:text-[320px] font-bold px-5 md:px-16 whitespace-nowrap"

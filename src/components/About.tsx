@@ -4,7 +4,7 @@ import { aboutData } from "@/data/about";
 
 const About = () => {
   return (
-    <section className="py-16 2xl:py-32 relative">
+    <section className="py-12 2xl:py-32 relative">
       <MarqueeText 
         text={aboutData.title}
         className="text-6xl md:text-[240px] font-bold leading-tight text-black"

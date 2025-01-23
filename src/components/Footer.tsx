@@ -21,29 +21,29 @@ const Footer = () => {
 
   const containerVariants = {
     hidden: { 
-      opacity: isMobile ? 1 : 0, 
-      y: isMobile ? 0 : 100 
+      opacity: 0, 
+      y: 100 
     },
     visible: {
       opacity: 1,
       y: 0,
       transition: {
-        duration: isMobile ? 0 : 0.8,
-        staggerChildren: isMobile ? 0 : 0.2
+        duration: 0.8,
+        staggerChildren: 0.2
       }
     }
   };
   
   const itemVariants = {
     hidden: { 
-      opacity: isMobile ? 1 : 0, 
-      y: isMobile ? 0 : 50 
+      opacity: 0, 
+      y: 50 
     },
     visible: { 
       opacity: 1, 
       y: 0,
       transition: { 
-        duration: isMobile ? 0 : 0.5 
+        duration: 0.5 
       }
     }
   };
@@ -53,13 +53,13 @@ const Footer = () => {
       className="bg-black text-white"
       initial="hidden"
       whileInView="visible"
-      viewport={{ amount: 0.2 }}
+      viewport={{ once: true, amount: 0.2 }}
       variants={containerVariants}
     >
       {/* Footer Hero */}
-      <div className="max-w-3xl mx-auto px-5 pt-32 xl:pt-64 pb-32">
+      <div className="max-w-3xl mx-auto px-5 pt-24 md:pt-32 xl:pt-64 pb-8 md:pb-32">
         <motion.div 
-          className="flex flex-col md:flex-row justify-between items-center gap-8"
+          className="flex flex-col md:flex-row justify-between items-start md:items-center gap-8"
           variants={itemVariants}
         >
           <motion.h2 

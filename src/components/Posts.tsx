@@ -35,12 +35,11 @@ const containerVariants = {
 
 const Posts = () => {
     return (
-      <section className="py-32 px-5 md:px-16">
-        <motion.div 
-          className="max-w-3xl mx-auto"
+      <section className="max-w-3xl mx-auto py-12 md:py-32 px-5 md:px-16">
+        <motion.div
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: false, amount: 0.2 }}
+          viewport={{ once: true, amount: 0.2 }}
           variants={containerVariants}
         >
           {posts.map((post, index) => (
@@ -86,7 +85,7 @@ const Posts = () => {
                 </div>
               {/* Separator line */}
               {index !== posts.length - 1 && (
-                <div className="w-screen h-px bg-black/10" />
+                <div className="h-px bg-black/10" />
               )}
                 
               </Link>

@@ -6,7 +6,7 @@ import { masonryImage } from "@/data/masonaryImages";
   const MasonryImages = () => {
   
     return (
-      <div className="relative px-5 xl:px-16 2xl:px-48 py-16 2xl:py-32">
+      <div className="relative px-5 xl:px-16 2xl:px-48 py-12 2xl:py-32">
         <div className="flex flex-wrap justify-between gap-6 md:gap-12">
           {masonryImage.images.map((image, index) => (
             <motion.div
@@ -17,8 +17,8 @@ import { masonryImage } from "@/data/masonaryImages";
               className={cn(
                 "relative overflow-hidden",
                 index % 2 === 0 
-                  ? "w-full xl:w-[33vw] 2xl:w-[25vw] h-[400px]" 
-                  : "w-full xl:w-[50vw] 2xl:w-[47vw] h-[730px] xl:mt-64",
+                  ? "w-full xl:w-[33vw] 2xl:w-[25vw] aspect-video md:h-[400px]" 
+                  : "w-full xl:w-[50vw] 2xl:w-[47vw] h-[380px] md:h-[730px] xl:mt-64",
               )}
             >
               <img
