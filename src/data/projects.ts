@@ -23,6 +23,6 @@ export const projects: Project[] = [
     },
 ];
 
-export const projectHeadline: ProjectHeadline[] = {
+export const projectHeadline: ProjectHeadline = {
     headline: 'Work'
 }

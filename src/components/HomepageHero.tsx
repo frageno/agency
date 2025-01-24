@@ -9,7 +9,10 @@ import { homepageHero } from '@/data/homepagehero';
 
 const HomepageHero = () => {
   return (
-    <section className="w-full md:min-h-screen relative flex flex-col lg:flex-row gap-y-24 md:mb-32 isolate mt-[152px]">
+    <section 
+      id="home"
+      className="w-full md:min-h-screen relative flex flex-col lg:flex-row gap-y-24 md:mb-32 isolate mt-[152px]"
+    >
       {/* Left Section: Content*/}
       <div className="flex flex-1 flex-col justify-center items-center lg:max-w-[50%] z-10 space-y-8 md:space-y-20 bg-white">
         <MarqueeText 

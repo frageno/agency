@@ -50,7 +50,7 @@ const CardTeaser = ({ title, description, image, link }: Card) => {
   
   const CardsTeasers = () => {
     return (
-      <section className="w-full grid grid-cols-1 xl:grid-cols-3">
+      <section id="strategy" className="w-full grid grid-cols-1 xl:grid-cols-3">
         {cards.map((card, index) => (
           <CardTeaser key={index} {...card} />
         ))}

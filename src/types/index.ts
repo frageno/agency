@@ -48,7 +48,6 @@ export interface Footer {
 
 
 export interface HomepageHero {
-  title: string;
   description: string;
   buttonText: string;
   buttonLink: string;
@@ -89,6 +88,6 @@ export interface ProjectHeadline {
 }
 
 export interface Text {
-  text: string;
-  highlighted: string;
+  content: string;
+  highlighted: Array<string>;
 }

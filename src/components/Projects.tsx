@@ -20,7 +20,8 @@ const Projects = () => {
   const headlineX = useTransform(scrollYProgress, [0, 0.2], ["-100%", "0%"]);
 
   return (
-    <section 
+    <section
+      id="projects"
       ref={containerRef} 
       className="relative h-[300vh] bg-background py-12 md:py-32"
     >
@@ -46,7 +47,7 @@ const Projects = () => {
                 <img 
                   src={project.image} 
                   alt={project.title} 
-                  className="object-cover w-full h-full 2xl:h-[640px]"
+                  className="object-cover w-full h-[60vh] 2xl:h-[640px]"
                 />
               </div>
               <div className="my-10">

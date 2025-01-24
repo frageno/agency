@@ -50,6 +50,7 @@ const Footer = () => {
 
   return (
     <motion.footer 
+      id="footer"
       className="bg-black text-white"
       initial="hidden"
       whileInView="visible"

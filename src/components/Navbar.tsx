@@ -98,10 +98,10 @@ const Navbar = () => {
             </Link>
           ))}
           <Link 
-            href="/contact"
+            href={navbarContent.navbarButtonLink}
             className="px-8 py-4 bg-black text-white text-xl hover:bg-black/90 transition-colors"
           >
-            Let's Talk
+            {navbarContent.navbarButtonTitle}
           </Link>
         </nav>
       </div>
