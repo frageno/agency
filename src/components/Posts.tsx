@@ -35,7 +35,7 @@ const containerVariants = {
 
 const Posts = () => {
     return (
-      <section className="max-w-3xl mx-auto py-12 md:py-32 px-5 md:px-16">
+      <section className="max-w-3xl mx-auto py-12 xl:py-32 px-5 md:px-16">
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -51,7 +51,7 @@ const Posts = () => {
                 href={post.link}
                 className="group block relative"
               >
-                <div className="relative transition-transform duration-700 bg-white px-5 py-12 md:py-24 before:content-[''] before:absolute before:top-0 before:left-[50%] before:w-[100vw] before:h-full before:bg-white before:-ml-[50vw] before:mix-blend-difference before:scale-y-0 before:transition-transform before:duration-700 before:ease-in-out before:pointer-events-none before:z-[1] group-hover:before:scale-y-100">
+                <div className="relative transition-transform duration-700 bg-white px-5 py-12 xl:py-24 before:content-[''] before:absolute before:top-0 before:left-[50%] before:w-[100vw] before:h-full before:bg-white before:-ml-[50vw] before:mix-blend-difference before:scale-y-0 before:transition-transform before:duration-700 before:ease-in-out before:pointer-events-none before:z-[1] group-hover:before:scale-y-100">
                   <div className="relative z-[2] flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
                     <div className="flex items-center">
                       <motion.div

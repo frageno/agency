@@ -25,7 +25,7 @@ const Text = () => {
       initial={{ opacity: 0, y: 100 }}
       animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      className="w-full md:max-w-[80vw] text-center mx-auto py-12 md:py-32 px-5 md:px-8"
+      className="w-full xl:max-w-[80vw] text-center mx-auto py-16 md:py-0 xl:py-32 px-5 md:px-8"
     >
       <p className="text-2xl lg:text-4xl 2xl:text-7xl !leading-[2.8rem] lg:!leading-[4rem] 2xl:!leading-[1.6]">
         {typeof textContent.content === 'string' ? highlightText(textContent.content) : textContent.content}

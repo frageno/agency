@@ -6,6 +6,7 @@ interface MarqueeTextProps {
   text: string;
   className?: string;
   repeat?: number;
+  as?: 'h1' | 'h2'
 }
 
 const marqueeVariants = {
@@ -23,10 +24,11 @@ const marqueeVariants = {
   },
 };
 
-const MarqueeText = ({ text, className, repeat = 3 }: MarqueeTextProps) => {
+const MarqueeText = ({ text, className, repeat = 3, as = 'h2' }: MarqueeTextProps) => {
+  const MotionHeading = motion[as];
   return (
     <div className="w-screen relative z-10 mix-blend-difference overflow-hidden text-white pointer-events-none -left-1/2 translate-x-1/2">
-      <motion.h1
+      <MotionHeading
         variants={marqueeVariants}
         animate="animate"
         className={cn(
@@ -37,7 +39,7 @@ const MarqueeText = ({ text, className, repeat = 3 }: MarqueeTextProps) => {
         {Array(repeat).fill(text).map((t, i) => (
           <span key={i}>{t} &nbsp;</span>
         ))}
-      </motion.h1>
+      </MotionHeading>
     </div>
   );
 };

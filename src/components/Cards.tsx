@@ -8,7 +8,7 @@ import { cards } from "@/data/cards";
 const CardTeaser = ({ title, description, image, link }: Card) => {
     return (
       <motion.div 
-        className="group relative min-h-[70vh] lg:min-h-[50vh] xl:min-h-[80vh] overflow-hidden"
+        className="group relative min-h-[80vh] md:min-h-[70vh] lg:min-h-[55vh] xl:min-h-[80vh] overflow-hidden"
         initial={{ opacity: 0, y: 100 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
@@ -25,7 +25,7 @@ const CardTeaser = ({ title, description, image, link }: Card) => {
         <div className="relative h-full p-4 2xl:p-12 flex flex-col justify-between">
           <div className="h-full p-4 2xl:p-12 flex flex-row xl:flex-col justify-center
           ">
-            <div className="transform transition-all duration-700 translate-y-[20%] group-hover:translate-y-[10%] lg:group-hover:translate-y-[3%] xl:group-hover:-translate-y-[30%] 2xl:group-hover:-translate-y-[20%] 2k:group-hover:-translate-y-1/2">
+            <div className="transform transition-all duration-700 translate-y-[20%] group-hover:translate-y-[5%] lg:group-hover:translate-y-[3%] xl:group-hover:-translate-y-[30%] 2xl:group-hover:-translate-y-[20%] 2k:group-hover:-translate-y-1/2">
               <h3 className="text-4xl font-bold text-white mb-4 group-hover:text-black">{title}</h3>
               <motion.p 
                 className="text-base 2xl:text-xl max-h-0 !leading-8 opacity-0 overflow-hidden transition-all duration-500 group-hover:opacity-100 group-hover:text-black group-hover:max-h-[500px]"

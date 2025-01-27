@@ -6,7 +6,7 @@ import { masonryImage } from "@/data/masonaryImages";
   const MasonryImages = () => {
   
     return (
-      <div className="relative px-5 xl:px-16 2xl:px-48 py-12 2xl:py-32">
+      <div className="relative px-5 xl:px-16 2xl:px-48 py-12 lg:py-32">
         <div className="flex flex-wrap justify-between gap-6 md:gap-12">
           {masonryImage.images.map((image, index) => (
             <motion.div

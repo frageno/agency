@@ -58,14 +58,14 @@ const Footer = () => {
       variants={containerVariants}
     >
       {/* Footer Hero */}
-      <div className="max-w-3xl mx-auto px-5 pt-24 md:pt-32 xl:pt-64 pb-8 md:pb-32">
+      <div className="max-w-3xl mx-auto px-5 pt-24 lg:pt-32 xl:pt-64 pb-8 lg:pb-32">
         <motion.div 
           className="flex flex-col md:flex-row justify-between items-start md:items-center gap-8"
           variants={itemVariants}
         >
           <motion.h2 
             variants={itemVariants}
-            className="text-4xl md:text-6xl xl:text-[250px] font-bold"
+            className="text-4xl md:text-6xl xl:text-[150px] 2xl:text-[250px] font-bold"
           >
             {footerData.hero.title}
           </motion.h2>

@@ -17,7 +17,6 @@ const Projects = () => {
   });
 
   const x = useTransform(scrollYProgress, [0, 1], ["0%", "-75%"]);
-  const headlineX = useTransform(scrollYProgress, [0, 0.2], ["-100%", "0%"]);
 
   return (
     <section
@@ -47,7 +46,7 @@ const Projects = () => {
                 <img 
                   src={project.image} 
                   alt={project.title} 
-                  className="object-cover w-full h-[60vh] 2xl:h-[640px]"
+                  className="object-cover w-full h-[40vh] md:h-[60vh] 2xl:h-[640px]"
                 />
               </div>
               <div className="my-10">
