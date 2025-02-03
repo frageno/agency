@@ -10,14 +10,50 @@ const Navbar = () => {
   const [hidden, setHidden] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const { scrollY } = useScroll();
+  const [hasScrolled, setHasScrolled] = useState(false);
 
+  // Handle smooth scroll for menu items
+  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    setIsOpen(false); // Close mobile menu
+
+    // Get the target element
+    const targetElement = document.querySelector(href);
+    if (targetElement) {
+      // Calculate header height - use actual header height from your CSS
+      const headerHeight = 100; // Adjust this value based on your header height
+      const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY - headerHeight;
+      
+      // Use Lenis scroll if available (from your SmoothScroll component)
+      const lenis = (window as any).lenis;
+      if (lenis) {
+        lenis.scrollTo(targetElement, {
+          offset: -headerHeight, // Add offset here
+          duration: 1.2,
+          easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t))
+        });
+      } else {
+        // Fallback to native smooth scroll
+        window.scrollTo({
+          top: targetPosition,
+          behavior: "smooth"
+        });
+      }
+    }
+  };
+
+  // Restore scroll hide/show behavior
   useMotionValueEvent(scrollY, "change", (latest) => {
-    const previous = scrollY.getPrevious();
-    if (latest > previous && latest > 150) {
-      setHidden(true);
-      setIsOpen(false);
+    // Check if page has scrolled past threshold
+    if (latest > 50) {
+      setHasScrolled(true);
     } else {
-      setHidden(false);
+      setHasScrolled(false);
+    }
+
+    // Close mobile menu if open while scrolling
+    if (latest > 50 && isOpen) {
+      setIsOpen(false);
     }
   });
 
@@ -66,7 +102,7 @@ const Navbar = () => {
             <Link
               key={index}
               href={link.href}
-              onClick={() => setIsOpen(false)}
+              onClick={(e) => handleScroll(e, link.href)}
               className="text-4xl py-4 hover:text-black/60 transition-colors"
             >
               {link.title}
@@ -74,7 +110,7 @@ const Navbar = () => {
           ))}
           <Link 
             href={navbarContent.navbarButtonLink}
-            onClick={() => setIsOpen(false)}
+            onClick={(e) => handleScroll(e, navbarContent.navbarButtonLink)}
             className="mt-8 px-8 py-4 bg-black text-white text-xl hover:bg-black/90 transition-colors"
           >
             {navbarContent.navbarButtonTitle}
@@ -87,6 +123,7 @@ const Navbar = () => {
             <Link
               key={index}
               href={link.href}
+              onClick={(e) => handleScroll(e, link.href)}
               className={cn(
                 "text-3xl hover:text-black/90 transition-colors",
                 "relative after:absolute after:left-0 after:-bottom-2",
@@ -99,6 +136,7 @@ const Navbar = () => {
           ))}
           <Link 
             href={navbarContent.navbarButtonLink}
+            onClick={(e) => handleScroll(e, navbarContent.navbarButtonLink)}
             className="px-8 py-4 bg-black text-white text-xl hover:bg-black/90 transition-colors"
           >
             {navbarContent.navbarButtonTitle}
